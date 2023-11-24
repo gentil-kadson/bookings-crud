@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <title>Excluir hospedagem</title>
+  </head>
+  <body>
+    <form method="post" class="p-3 bg-white rounded mt-5 border border-primary rounded mx-auto" style="width: fit-content;">
+      {% csrf_token %}
+      <p class="text-center">
+        Tem certeza que quer deletar a hospedagem do cliente "<span class="font-weight-bold">{{ hospedagem.cliente.nome }}</span>"?
+      </p>
+      {{ form }}
+      <input class="btn btn-danger d-block mx-auto my-auto" type="submit" value="Confirmar" />
+    </form>
+  </body>
+</html>
